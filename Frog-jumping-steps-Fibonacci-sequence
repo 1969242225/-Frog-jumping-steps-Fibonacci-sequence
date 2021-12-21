@@ -1,0 +1,16 @@
+#include <stdio.h> 
+long int fa(int);
+int main()
+	{
+		int a;
+		long int b;
+		scanf("%d",&a);
+		b=fa(a);
+		printf("%ld",b); 
+	}
+long int fa(int x)
+	{
+		if(x==1||x==2)
+		return 1;
+		else return fa(x-1)+fa(x-2);
+	}
